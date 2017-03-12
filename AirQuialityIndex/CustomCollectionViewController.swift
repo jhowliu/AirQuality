@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Alamofire
 
-class CustomCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class CustomCollectionViewController:UICollectionViewController, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     var tap: UITapGestureRecognizer!
     
@@ -125,7 +126,7 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
     
     func handleRefreshButton() {
         fetchData()
-        navigationItem.rightBarButtonItem?.isEnabled = false
+        navigationItem.leftBarButtonItem?.isEnabled = false
     }
     
     func hideOrShow() {
@@ -212,43 +213,27 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
     }
     
     func fetchData() {
-        if let url = URL(string: "http://opendata.epa.gov.tw/ws/Data/REWIQA/?$orderby=County&$format=json") {
-       
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let err = error {
-                    print("failed to fetch data: ", err)
-                    return
-                }
-                
-                guard let data = data else { return }
-               
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        Alamofire.request("http://opendata.epa.gov.tw/ws/Data/REWIQA/", method: .get, parameters: ["orderby":"County", "format":"json"]).responseJSON(completionHandler: { response in
+            
+                if let JSON = response.result.value {
                     
-                    guard let cityDictionaries = json as? [[String: Any]] else { return }
-                  
+                    guard let dictionaries = JSON as? [[String: Any]] else { return }
+                    
                     GlobalInstances.nodes = []
                     
-                    for dict in cityDictionaries {
-                        let node = Node(data: dict)
+                    for dictionary in dictionaries {
+                        let node = Node(data: dictionary)
                         GlobalInstances.nodes?.append(node)
-                        if let index = self.favorNodes.checkIfExist(node: node) {
-                            self.favorNodes[index] = node
-                        }
+                        if let index = self.favorNodes.checkIfExist(node: node) { self.favorNodes[index] = node }
                     }
-                   
+                    
                     DispatchQueue.main.async {
                         print("Nodes fetch successfully.")
                         self.collectionView?.reloadData()
                         self.navigationItem.leftBarButtonItem?.isEnabled = true
                     }
-                    
-                } catch let jsonError {
-                    print("Failed to parse JSon Object: ", jsonError)
                 }
-                
-            }.resume()
-        }
+            })
     }
 }
 

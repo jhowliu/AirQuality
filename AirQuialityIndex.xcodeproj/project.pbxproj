@@ -20,9 +20,12 @@
 		7F4907BD1E75B32A005FDEFA /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907B21E75B32A005FDEFA /* Spot.swift */; };
 		7F4907BE1E75B32A005FDEFA /* theCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907B31E75B32A005FDEFA /* theCell.swift */; };
 		7F4907C41E75B760005FDEFA /* coordinates.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F4907C31E75B760005FDEFA /* coordinates.json */; };
+		EAF48BBDDAA5A92464A1F5DE /* Pods_AirQuialityIndex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6107A4B221B8153D08BDF7 /* Pods_AirQuialityIndex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		056099A09654CCD33E3B2BE7 /* Pods-AirQuialityIndex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQuialityIndex.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQuialityIndex/Pods-AirQuialityIndex.release.xcconfig"; sourceTree = "<group>"; };
+		3B6107A4B221B8153D08BDF7 /* Pods_AirQuialityIndex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQuialityIndex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4907941E75B2CC005FDEFA /* AirQuialityIndex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQuialityIndex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4907971E75B2CC005FDEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F49079E1E75B2CC005FDEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		7F4907B21E75B32A005FDEFA /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		7F4907B31E75B32A005FDEFA /* theCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = theCell.swift; sourceTree = "<group>"; };
 		7F4907C31E75B760005FDEFA /* coordinates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = coordinates.json; path = ../../../../coordinates.json; sourceTree = "<group>"; };
+		B9E4806FC75C707C25256B54 /* Pods-AirQuialityIndex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQuialityIndex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQuialityIndex/Pods-AirQuialityIndex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF48BBDDAA5A92464A1F5DE /* Pods_AirQuialityIndex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,8 @@
 			children = (
 				7F4907961E75B2CC005FDEFA /* AirQuialityIndex */,
 				7F4907951E75B2CC005FDEFA /* Products */,
+				F0DE13E9E19FE55CAA232F10 /* Pods */,
+				E60B6916F70BF8965326F4E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +127,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E60B6916F70BF8965326F4E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B6107A4B221B8153D08BDF7 /* Pods_AirQuialityIndex.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0DE13E9E19FE55CAA232F10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9E4806FC75C707C25256B54 /* Pods-AirQuialityIndex.debug.xcconfig */,
+				056099A09654CCD33E3B2BE7 /* Pods-AirQuialityIndex.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F4907A61E75B2CC005FDEFA /* Build configuration list for PBXNativeTarget "AirQuialityIndex" */;
 			buildPhases = (
+				923EB9BE5E8613B8562BE579 /* [CP] Check Pods Manifest.lock */,
 				7F4907901E75B2CC005FDEFA /* Sources */,
 				7F4907911E75B2CC005FDEFA /* Frameworks */,
 				7F4907921E75B2CC005FDEFA /* Resources */,
+				76678A83C27A3B112ED4F182 /* [CP] Embed Pods Frameworks */,
+				DF31726F4F2E367045E6E75C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +214,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76678A83C27A3B112ED4F182 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQuialityIndex/Pods-AirQuialityIndex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		923EB9BE5E8613B8562BE579 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF31726F4F2E367045E6E75C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQuialityIndex/Pods-AirQuialityIndex-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7F4907901E75B2CC005FDEFA /* Sources */ = {
@@ -313,6 +388,7 @@
 		};
 		7F4907A71E75B2CC005FDEFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9E4806FC75C707C25256B54 /* Pods-AirQuialityIndex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CARZAJ37XA;
@@ -326,6 +402,7 @@
 		};
 		7F4907A81E75B2CC005FDEFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 056099A09654CCD33E3B2BE7 /* Pods-AirQuialityIndex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CARZAJ37XA;
