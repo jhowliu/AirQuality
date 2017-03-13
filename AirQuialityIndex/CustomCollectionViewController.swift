@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class CustomCollectionViewController:UICollectionViewController, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class CustomCollectionViewController:UICollectionViewController, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CellViewDelegate {
     
     var tap: UITapGestureRecognizer!
     
@@ -23,7 +23,7 @@ class CustomCollectionViewController:UICollectionViewController, UICollectionVie
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.backgroundColor = UIColor(red: 80/255, green: 80/255, blue: 80/255, alpha: 1)
-        collectionView?.register(theCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView?.register(CellForCollectionView.self, forCellWithReuseIdentifier: "cellId")
         
         tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard))
         
@@ -160,24 +160,47 @@ class CustomCollectionViewController:UICollectionViewController, UICollectionVie
         })
      
         hideOrShow()
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
+   
+    var selectedCell: CellForCollectionView?
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 110)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // save the favorite nodes in userDefault
+        saveUserFavoriteNodes()
         return favorNodes.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! theCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! CellForCollectionView
         
         let selectedData = favorNodes[indexPath.row]
         cell.data = selectedData
+        cell.delegate = self
         
         return cell
+    }
+   
+    // CellViewDelegate delegate  - Use for custom cell
+    func cellViewDidSwipe() {
+        UIView.animate(withDuration: 3, animations: {
+            self.selectedCell?.center.x -= (self.view.bounds.width/2)
+        })
+    }
+    
+    func deleteDidPressed(node: Node) {
+        if let index = favorNodes.checkIfExist(node: node) {
+            favorNodes.remove(at: index)
+            DispatchQueue.main.async {
+                self.collectionView?.reloadData()
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -203,9 +226,6 @@ class CustomCollectionViewController:UICollectionViewController, UICollectionVie
         if favorNodes.checkIfExist(node: favorNode) != nil { return }
         
         favorNodes.append(favorNode)
-        
-        saveUserFavoriteNodes()
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -18,7 +18,7 @@
 		7F4907B91E75B32A005FDEFA /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AE1E75B32A005FDEFA /* CustomTabBarController.swift */; };
 		7F4907BA1E75B32A005FDEFA /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AF1E75B32A005FDEFA /* DataModel.swift */; };
 		7F4907BD1E75B32A005FDEFA /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907B21E75B32A005FDEFA /* Spot.swift */; };
-		7F4907BE1E75B32A005FDEFA /* theCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907B31E75B32A005FDEFA /* theCell.swift */; };
+		7F4907BE1E75B32A005FDEFA /* CellForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */; };
 		7F4907C41E75B760005FDEFA /* coordinates.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F4907C31E75B760005FDEFA /* coordinates.json */; };
 		EAF48BBDDAA5A92464A1F5DE /* Pods_AirQuialityIndex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6107A4B221B8153D08BDF7 /* Pods_AirQuialityIndex.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +39,7 @@
 		7F4907AE1E75B32A005FDEFA /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		7F4907AF1E75B32A005FDEFA /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		7F4907B21E75B32A005FDEFA /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
-		7F4907B31E75B32A005FDEFA /* theCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = theCell.swift; sourceTree = "<group>"; };
+		7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellForCollectionView.swift; sourceTree = "<group>"; };
 		7F4907C31E75B760005FDEFA /* coordinates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = coordinates.json; path = ../../../../coordinates.json; sourceTree = "<group>"; };
 		B9E4806FC75C707C25256B54 /* Pods-AirQuialityIndex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQuialityIndex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQuialityIndex/Pods-AirQuialityIndex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +99,7 @@
 			children = (
 				7F4907AA1E75B32A005FDEFA /* CellForSearch.swift */,
 				7F4907B21E75B32A005FDEFA /* Spot.swift */,
-				7F4907B31E75B32A005FDEFA /* theCell.swift */,
+				7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 				7F4907B81E75B32A005FDEFA /* CustomNavController.swift in Sources */,
 				7F4907B41E75B32A005FDEFA /* ArrayHelper.swift in Sources */,
 				7F4907B51E75B32A005FDEFA /* CellForSearch.swift in Sources */,
-				7F4907BE1E75B32A005FDEFA /* theCell.swift in Sources */,
+				7F4907BE1E75B32A005FDEFA /* CellForCollectionView.swift in Sources */,
 				7F4907BA1E75B32A005FDEFA /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

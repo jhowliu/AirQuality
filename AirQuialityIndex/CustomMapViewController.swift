@@ -41,9 +41,16 @@ class CustomMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         setupAnnotations()
     }
     
+    func refreshAnnotation() {
+        if let mapView = mapView {
+            mapView.removeAnnotations(mapView.annotations)
+            setupAnnotations()
+        }
+    }
+    
     private func setupLocationManager() {
         locationManager = CLLocationManager()
-        locationManager?.requestLocation()
+        //locationManager?.requestLocation()
     }
     
     private func setupAnnotations() {
@@ -96,6 +103,17 @@ class CustomMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
         }
     }
     
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        centerTheLocation(coordinate: userLocation.coordinate)
+    }
+    
+    func handleTargetPressed() {
+        //locationManager?.requestLocation()
+        if let location = mapView?.userLocation.location {
+            centerTheLocation(coordinate: location.coordinate)
+        }
+    }
+    
     private func setupMapConfiguration() {
         mapView = MKMapView(frame: view.frame)
         view.addSubview(mapView!)
@@ -110,7 +128,7 @@ class CustomMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     }
     
     private func centerTheLocation(coordinate: CLLocationCoordinate2D) {
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         mapView?.setRegion(region, animated: true)
     }
@@ -118,12 +136,6 @@ class CustomMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("fail to locate the location: ", error)
     }
-    /*
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        print("Hello")
-        centerTheLocation(coordinate: userLocation.coordinate)
-    }
-    */
    
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         // AnyHashtable is as same as NSObject in Objective-C
@@ -143,10 +155,6 @@ class CustomMapViewController: UIViewController, MKMapViewDelegate, CLLocationMa
                 mapView.view(for: annotation)?.isHidden = true
             }
         }
-    }
-    
-    func handleTargetPressed() {
-        locationManager?.requestLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

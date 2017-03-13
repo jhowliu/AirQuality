@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CustomTabBarController: UITabBarController {
+class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
+        self.delegate = self
         viewControllers = []
         
         setupTabBarItems()
@@ -31,5 +32,22 @@ class CustomTabBarController: UITabBarController {
         tabBar.isTranslucent = false
         
         viewControllers = [firstNavController, secNavController]
+    }
+
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let navController = viewController as! CustomNavController
+        
+        switch navController.title! {
+        case "首頁":
+            let home = navController.topViewController as! CustomCollectionViewController
+            DispatchQueue.main.async {
+                home.collectionView?.reloadData()
+            }
+        case "地圖":
+            let map = navController.topViewController as! CustomMapViewController
+            map.refreshAnnotation()
+        default:
+            return
+        }
     }
 }
