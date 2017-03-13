@@ -1,0 +1,306 @@
+{
+    "斗六": {
+        "latitude": 23.7077947, 
+        "longtitude": 120.5409089
+    }, 
+    "馬公": {
+        "latitude": 23.5661218, 
+        "longtitude": 119.5861581
+    }, 
+    "大園": {
+        "latitude": 25.0492632, 
+        "longtitude": 121.193945
+    }, 
+    "冬山": {
+        "latitude": 24.6550376, 
+        "longtitude": 121.7641363
+    }, 
+    "忠明": {
+        "latitude": 24.1584861, 
+        "longtitude": 120.6639459
+    }, 
+    "潮州": {
+        "latitude": 22.5514922, 
+        "longtitude": 120.5402672
+    }, 
+    "竹山": {
+        "latitude": 23.712201, 
+        "longtitude": 120.6890055
+    }, 
+    "金門": {
+        "latitude": 24.4493726, 
+        "longtitude": 118.3766352
+    }, 
+    "淡水": {
+        "latitude": 25.1719805, 
+        "longtitude": 121.4433706
+    }, 
+    "菜寮": {
+        "latitude": 25.060274, 
+        "longtitude": 121.492156
+    }, 
+    "臺西": {
+        "latitude": 23.7229714, 
+        "longtitude": 120.1935663
+    }, 
+    "關山": {
+        "latitude": 23.0495603, 
+        "longtitude": 121.1646339
+    }, 
+    "頭份": {
+        "latitude": 24.6884438, 
+        "longtitude": 120.9024836
+    }, 
+    "左營": {
+        "latitude": 22.6877358, 
+        "longtitude": 120.2916524
+    }, 
+    "汐止": {
+        "latitude": 25.0616059, 
+        "longtitude": 121.6397184
+    }, 
+    "苗栗": {
+        "latitude": 24.5711502, 
+        "longtitude": 120.8154358
+    }, 
+    "鳳山": {
+        "latitude": 22.6113591, 
+        "longtitude": 120.3493158
+    }, 
+    "楠梓": {
+        "latitude": 22.7175372, 
+        "longtitude": 120.3031871
+    }, 
+    "三重": {
+        "latitude": 25.0614534, 
+        "longtitude": 121.4867114
+    }, 
+    "馬祖": {
+        "latitude": 26.1498753, 
+        "longtitude": 119.9310189
+    }, 
+    "土城": {
+        "latitude": 24.968371, 
+        "longtitude": 121.438034
+    }, 
+    "永和": {
+        "latitude": 25.0103251, 
+        "longtitude": 121.5145353
+    }, 
+    "大里": {
+        "latitude": 24.1046899, 
+        "longtitude": 120.6812114
+    }, 
+    "新竹": {
+        "latitude": 24.8138287, 
+        "longtitude": 120.9674798
+    }, 
+    "新店": {
+        "latitude": 24.978282, 
+        "longtitude": 121.5394822
+    }, 
+    "南投": {
+        "latitude": 23.9179637, 
+        "longtitude": 120.6775054
+    }, 
+    "古亭": {
+        "latitude": 25.0006507, 
+        "longtitude": 121.5361235
+    }, 
+    "中山": {
+        "latitude": 25.0792018, 
+        "longtitude": 121.5427093
+    }, 
+    "小港": {
+        "latitude": 22.5553185, 
+        "longtitude": 120.3608455
+    }, 
+    "竹東": {
+        "latitude": 24.774922, 
+        "longtitude": 121.0449768
+    }, 
+    "大寮": {
+        "latitude": 22.584481, 
+        "longtitude": 120.4011911
+    }, 
+    "松山": {
+        "latitude": 25.0541591, 
+        "longtitude": 121.5638621
+    }, 
+    "林口": {
+        "latitude": 25.0790108, 
+        "longtitude": 121.3881378
+    }, 
+    "臺東": {
+        "latitude": 22.7972447, 
+        "longtitude": 121.0713702
+    }, 
+    "沙鹿": {
+        "latitude": 24.2377939, 
+        "longtitude": 120.5854674
+    }, 
+    "線西": {
+        "latitude": 24.1331612, 
+        "longtitude": 120.4530456
+    }, 
+    "前鎮": {
+        "latitude": 22.5970794, 
+        "longtitude": 120.3147208
+    }, 
+    "二林": {
+        "latitude": 23.9141358, 
+        "longtitude": 120.4011911
+    }, 
+    "新營": {
+        "latitude": 23.3119567, 
+        "longtitude": 120.3089541
+    }, 
+    "臺南": {
+        "latitude": 22.9997281, 
+        "longtitude": 120.2270277
+    }, 
+    "中壢": {
+        "latitude": 24.9721514, 
+        "longtitude": 121.2053963
+    }, 
+    "平鎮": {
+        "latitude": 24.9296022, 
+        "longtitude": 121.2053963
+    }, 
+    "善化": {
+        "latitude": 23.1402613, 
+        "longtitude": 120.3089541
+    }, 
+    "林園": {
+        "latitude": 22.4986756, 
+        "longtitude": 120.4011911
+    }, 
+    "萬里": {
+        "latitude": 25.1676024, 
+        "longtitude": 121.6397184
+    }, 
+    "湖口": {
+        "latitude": 24.8814458, 
+        "longtitude": 121.0449768
+    }, 
+    "桃園": {
+        "latitude": 24.9936281, 
+        "longtitude": 121.3009798
+    }, 
+    "橋頭": {
+        "latitude": 22.7539012, 
+        "longtitude": 120.3089541
+    }, 
+    "大同": {
+        "latitude": 25.055022, 
+        "longtitude": 121.535287
+    }, 
+    "麥寮": {
+        "latitude": 23.7485306, 
+        "longtitude": 120.2562662
+    }, 
+    "恆春": {
+        "latitude": 22.0008277, 
+        "longtitude": 120.7447638
+    }, 
+    "仁武": {
+        "latitude": 22.6947932, 
+        "longtitude": 120.3608455
+    }, 
+    "豐原": {
+        "latitude": 24.2521156, 
+        "longtitude": 120.7223572
+    }, 
+    "西屯": {
+        "latitude": 24.1769764, 
+        "longtitude": 120.6424333
+    }, 
+    "基隆": {
+        "latitude": 25.1276033, 
+        "longtitude": 121.7391833
+    }, 
+    "安南": {
+        "latitude": 23.0585336, 
+        "longtitude": 120.1358346
+    }, 
+    "復興": {
+        "latitude": 22.6083352, 
+        "longtitude": 120.3117222
+    }, 
+    "新莊": {
+        "latitude": 25.0265985, 
+        "longtitude": 121.4178347
+    }, 
+    "新港": {
+        "latitude": 23.538123, 
+        "longtitude": 120.3550808
+    }, 
+    "花蓮": {
+        "latitude": 23.9871589, 
+        "longtitude": 121.6015714
+    }, 
+    "板橋": {
+        "latitude": 25.0114095, 
+        "longtitude": 121.4618415
+    }, 
+    "前金": {
+        "latitude": 22.6254162, 
+        "longtitude": 120.2945362
+    }, 
+    "龍潭": {
+        "latitude": 24.8444927, 
+        "longtitude": 121.2053963
+    }, 
+    "嘉義": {
+        "latitude": 23.4800751, 
+        "longtitude": 120.4491113
+    }, 
+    "彰化": {
+        "latitude": 24.0517963, 
+        "longtitude": 120.5161352
+    }, 
+    "士林": {
+        "latitude": 25.0950492, 
+        "longtitude": 121.5246077
+    }, 
+    "三義": {
+        "latitude": 24.3892633, 
+        "longtitude": 120.769476
+    }, 
+    "萬華": {
+        "latitude": 25.0262857, 
+        "longtitude": 121.4970294
+    }, 
+    "埔里": {
+        "latitude": 23.9932872, 
+        "longtitude": 120.9646866
+    }, 
+    "崙背": {
+        "latitude": 23.7601594, 
+        "longtitude": 120.3531749
+    }, 
+    "觀音": {
+        "latitude": 25.038615, 
+        "longtitude": 121.080347
+    }, 
+    "屏東": {
+        "latitude": 22.5519759, 
+        "longtitude": 120.5487597
+    }, 
+    "美濃": {
+        "latitude": 22.885385, 
+        "longtitude": 120.5509358
+    }, 
+    "朴子": {
+        "latitude": 23.4464152, 
+        "longtitude": 120.2570421
+    }, 
+    "宜蘭": {
+        "latitude": 24.7021073, 
+        "longtitude": 121.7377502
+    }, 
+    "陽明": {
+        "latitude": 25.0921827, 
+        "longtitude": 121.5172722
+    }
+}

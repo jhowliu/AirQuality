@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F48B8631E76A31900072E65 /* coordinates.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F48B8621E76A31900072E65 /* coordinates.json */; };
 		7F4907981E75B2CC005FDEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907971E75B2CC005FDEFA /* AppDelegate.swift */; };
 		7F49079F1E75B2CC005FDEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F49079E1E75B2CC005FDEFA /* Assets.xcassets */; };
 		7F4907A21E75B2CC005FDEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4907A01E75B2CC005FDEFA /* LaunchScreen.storyboard */; };
@@ -19,13 +20,13 @@
 		7F4907BA1E75B32A005FDEFA /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AF1E75B32A005FDEFA /* DataModel.swift */; };
 		7F4907BD1E75B32A005FDEFA /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907B21E75B32A005FDEFA /* Spot.swift */; };
 		7F4907BE1E75B32A005FDEFA /* CellForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */; };
-		7F4907C41E75B760005FDEFA /* coordinates.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F4907C31E75B760005FDEFA /* coordinates.json */; };
 		EAF48BBDDAA5A92464A1F5DE /* Pods_AirQuialityIndex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6107A4B221B8153D08BDF7 /* Pods_AirQuialityIndex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		056099A09654CCD33E3B2BE7 /* Pods-AirQuialityIndex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQuialityIndex.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQuialityIndex/Pods-AirQuialityIndex.release.xcconfig"; sourceTree = "<group>"; };
 		3B6107A4B221B8153D08BDF7 /* Pods_AirQuialityIndex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirQuialityIndex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F48B8621E76A31900072E65 /* coordinates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = coordinates.json; path = AirQuialityIndex/coordinates.json; sourceTree = SOURCE_ROOT; };
 		7F4907941E75B2CC005FDEFA /* AirQuialityIndex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQuialityIndex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4907971E75B2CC005FDEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F49079E1E75B2CC005FDEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		7F4907AF1E75B32A005FDEFA /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		7F4907B21E75B32A005FDEFA /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellForCollectionView.swift; sourceTree = "<group>"; };
-		7F4907C31E75B760005FDEFA /* coordinates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = coordinates.json; path = ../../../../coordinates.json; sourceTree = "<group>"; };
 		B9E4806FC75C707C25256B54 /* Pods-AirQuialityIndex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQuialityIndex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQuialityIndex/Pods-AirQuialityIndex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +118,7 @@
 		7F4907C21E75B547005FDEFA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7F4907C31E75B760005FDEFA /* coordinates.json */,
+				7F48B8621E76A31900072E65 /* coordinates.json */,
 				7F4907971E75B2CC005FDEFA /* AppDelegate.swift */,
 				7F49079E1E75B2CC005FDEFA /* Assets.xcassets */,
 				7F4907A01E75B2CC005FDEFA /* LaunchScreen.storyboard */,
@@ -208,7 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F4907A21E75B2CC005FDEFA /* LaunchScreen.storyboard in Resources */,
-				7F4907C41E75B760005FDEFA /* coordinates.json in Resources */,
+				7F48B8631E76A31900072E65 /* coordinates.json in Resources */,
 				7F49079F1E75B2CC005FDEFA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
