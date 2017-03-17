@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
+class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         self.delegate = self
         viewControllers = []
@@ -21,11 +21,11 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
         layout.scrollDirection = .vertical
         //  change the space between the cell
         layout.minimumLineSpacing = -5
-        let firstNavController = CustomNavController(rootViewController: CustomCollectionViewController(collectionViewLayout: layout))
+        let firstNavController = NavController(rootViewController: CollectionViewController(collectionViewLayout: layout))
         firstNavController.title = "首頁"
         firstNavController.tabBarItem.image = #imageLiteral(resourceName: "home")
        
-        let secNavController = CustomNavController(rootViewController: CustomMapViewController())
+        let secNavController = NavController(rootViewController: MapViewController())
         secNavController.title = "地圖"
         secNavController.tabBarItem.image = #imageLiteral(resourceName: "map")
         
@@ -35,16 +35,16 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        let navController = viewController as! CustomNavController
+        let navController = viewController as! NavController
         
         switch navController.title! {
         case "首頁":
-            let home = navController.topViewController as! CustomCollectionViewController
+            let home = navController.topViewController as! CollectionViewController
             DispatchQueue.main.async {
                 home.collectionView?.reloadData()
             }
         case "地圖":
-            let map = navController.topViewController as! CustomMapViewController
+            let map = navController.topViewController as! MapViewController
             map.refreshAnnotation()
         default:
             return

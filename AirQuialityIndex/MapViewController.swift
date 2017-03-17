@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class CustomMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     var queue = DispatchQueue(label: "com.meowdev.tw")
     

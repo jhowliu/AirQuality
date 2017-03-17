@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class CustomCollectionViewController:UICollectionViewController, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CellViewDelegate {
+class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CellViewDelegate {
     
     var tap: UITapGestureRecognizer!
     
@@ -185,6 +185,16 @@ class CustomCollectionViewController:UICollectionViewController, UICollectionVie
         cell.delegate = self
         
         return cell
+    }
+ 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let detailController = DetailController()
+        detailController.node = favorNodes[indexPath.row]
+        
+        let navController = NavController(rootViewController: detailController)
+        
+        present(navController, animated: true, completion: nil)
     }
    
     // CellViewDelegate delegate  - Use for custom cell

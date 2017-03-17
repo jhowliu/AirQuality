@@ -13,13 +13,15 @@
 		7F4907A21E75B2CC005FDEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4907A01E75B2CC005FDEFA /* LaunchScreen.storyboard */; };
 		7F4907B41E75B32A005FDEFA /* ArrayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907A91E75B32A005FDEFA /* ArrayHelper.swift */; };
 		7F4907B51E75B32A005FDEFA /* CellForSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AA1E75B32A005FDEFA /* CellForSearch.swift */; };
-		7F4907B61E75B32A005FDEFA /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AB1E75B32A005FDEFA /* CustomCollectionViewController.swift */; };
-		7F4907B71E75B32A005FDEFA /* CustomMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AC1E75B32A005FDEFA /* CustomMapViewController.swift */; };
-		7F4907B81E75B32A005FDEFA /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AD1E75B32A005FDEFA /* CustomNavController.swift */; };
-		7F4907B91E75B32A005FDEFA /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AE1E75B32A005FDEFA /* CustomTabBarController.swift */; };
+		7F4907B61E75B32A005FDEFA /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AB1E75B32A005FDEFA /* CollectionViewController.swift */; };
+		7F4907B71E75B32A005FDEFA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AC1E75B32A005FDEFA /* MapViewController.swift */; };
+		7F4907B81E75B32A005FDEFA /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AD1E75B32A005FDEFA /* NavController.swift */; };
+		7F4907B91E75B32A005FDEFA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AE1E75B32A005FDEFA /* TabBarController.swift */; };
 		7F4907BA1E75B32A005FDEFA /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907AF1E75B32A005FDEFA /* DataModel.swift */; };
 		7F4907BD1E75B32A005FDEFA /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907B21E75B32A005FDEFA /* Spot.swift */; };
 		7F4907BE1E75B32A005FDEFA /* CellForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */; };
+		7F4BABB01E7C557600379171 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BABAF1E7C557600379171 /* DetailController.swift */; };
+		7FFE4D371E7C6C5600B2C852 /* ViewForDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE4D361E7C6C5600B2C852 /* ViewForDetail.swift */; };
 		EAF48BBDDAA5A92464A1F5DE /* Pods_AirQuialityIndex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6107A4B221B8153D08BDF7 /* Pods_AirQuialityIndex.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,13 +36,15 @@
 		7F4907A31E75B2CC005FDEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F4907A91E75B32A005FDEFA /* ArrayHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayHelper.swift; sourceTree = "<group>"; };
 		7F4907AA1E75B32A005FDEFA /* CellForSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellForSearch.swift; sourceTree = "<group>"; };
-		7F4907AB1E75B32A005FDEFA /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
-		7F4907AC1E75B32A005FDEFA /* CustomMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMapViewController.swift; sourceTree = "<group>"; };
-		7F4907AD1E75B32A005FDEFA /* CustomNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
-		7F4907AE1E75B32A005FDEFA /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		7F4907AB1E75B32A005FDEFA /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		7F4907AC1E75B32A005FDEFA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7F4907AD1E75B32A005FDEFA /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		7F4907AE1E75B32A005FDEFA /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7F4907AF1E75B32A005FDEFA /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		7F4907B21E75B32A005FDEFA /* Spot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellForCollectionView.swift; sourceTree = "<group>"; };
+		7F4BABAF1E7C557600379171 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		7FFE4D361E7C6C5600B2C852 /* ViewForDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewForDetail.swift; sourceTree = "<group>"; };
 		B9E4806FC75C707C25256B54 /* Pods-AirQuialityIndex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQuialityIndex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQuialityIndex/Pods-AirQuialityIndex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +104,7 @@
 				7F4907AA1E75B32A005FDEFA /* CellForSearch.swift */,
 				7F4907B21E75B32A005FDEFA /* Spot.swift */,
 				7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */,
+				7FFE4D361E7C6C5600B2C852 /* ViewForDetail.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -107,10 +112,11 @@
 		7F4907C11E75B536005FDEFA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7F4907AB1E75B32A005FDEFA /* CustomCollectionViewController.swift */,
-				7F4907AC1E75B32A005FDEFA /* CustomMapViewController.swift */,
-				7F4907AD1E75B32A005FDEFA /* CustomNavController.swift */,
-				7F4907AE1E75B32A005FDEFA /* CustomTabBarController.swift */,
+				7F4BABAF1E7C557600379171 /* DetailController.swift */,
+				7F4907AB1E75B32A005FDEFA /* CollectionViewController.swift */,
+				7F4907AC1E75B32A005FDEFA /* MapViewController.swift */,
+				7F4907AD1E75B32A005FDEFA /* NavController.swift */,
+				7F4907AE1E75B32A005FDEFA /* TabBarController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -268,12 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFE4D371E7C6C5600B2C852 /* ViewForDetail.swift in Sources */,
 				7F4907981E75B2CC005FDEFA /* AppDelegate.swift in Sources */,
-				7F4907B91E75B32A005FDEFA /* CustomTabBarController.swift in Sources */,
-				7F4907B71E75B32A005FDEFA /* CustomMapViewController.swift in Sources */,
-				7F4907B61E75B32A005FDEFA /* CustomCollectionViewController.swift in Sources */,
+				7F4BABB01E7C557600379171 /* DetailController.swift in Sources */,
+				7F4907B91E75B32A005FDEFA /* TabBarController.swift in Sources */,
+				7F4907B71E75B32A005FDEFA /* MapViewController.swift in Sources */,
+				7F4907B61E75B32A005FDEFA /* CollectionViewController.swift in Sources */,
 				7F4907BD1E75B32A005FDEFA /* Spot.swift in Sources */,
-				7F4907B81E75B32A005FDEFA /* CustomNavController.swift in Sources */,
+				7F4907B81E75B32A005FDEFA /* NavController.swift in Sources */,
 				7F4907B41E75B32A005FDEFA /* ArrayHelper.swift in Sources */,
 				7F4907B51E75B32A005FDEFA /* CellForSearch.swift in Sources */,
 				7F4907BE1E75B32A005FDEFA /* CellForCollectionView.swift in Sources */,
