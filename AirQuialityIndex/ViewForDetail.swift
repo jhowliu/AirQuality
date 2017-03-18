@@ -8,33 +8,67 @@
 import UIKit
 
 class ViewForDetail: UIView {
+    var node: Node? {
+        didSet {
+            self.aqiLabel.text = node?.aqi
+            self.statusLabel.text = node?.status
+            self.pollutionView.node = node
+            let levelColor: UIColor = {
+                let convertedInt: Int = Int(node?.aqi ?? "-1") ?? -1
+                switch (convertedInt) {
+                case 0...50:
+                    return AirLevel.Good
+                case 51...100:
+                    return AirLevel.Moderate
+                case 101...150:
+                    return AirLevel.NotGood
+                case 151...200:
+                    return AirLevel.Unhealthy
+                case 201...300:
+                    return AirLevel.VeryUnhealthy
+                case 301...999:
+                    return AirLevel.Toxic
+                default:
+                    return UIColor.black
+                }
+            }()
+            aqiLabel.textColor = levelColor
+            statusLabel.textColor = levelColor
+        }
+    }
     
     private let aqiLabel: UILabel = {
         let aqi = UILabel()
         aqi.translatesAutoresizingMaskIntoConstraints = false
-        aqi.font = .systemFont(ofSize: 84, weight: UIFontWeightUltraLight)
+        aqi.font = .systemFont(ofSize: 108, weight: UIFontWeightLight)
         aqi.textAlignment = .center
-        aqi.text = "155"
         
         return aqi
     }()
     
-    private let locationLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 24, weight: UIFontWeightLight)
-        label.textAlignment = .center
-        label.text = "高雄"
-        
-        return label
-    }()
     
     private let separatorLine: UIView = {
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false
-        line.backgroundColor = .black
+        line.backgroundColor = UIColor(white: 0.8, alpha: 0.8)
         
         return line
+    }()
+    
+    private let statusLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 48, weight: UIFontWeightHeavy)
+        label.textAlignment = .center
+        
+        return label
+    }()
+    
+    private let pollutionView: PollutionView = {
+        let view = PollutionView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
     }()
 
     override init(frame: CGRect) {
@@ -43,21 +77,30 @@ class ViewForDetail: UIView {
         setupViews()
     }
     
+    
+    
     func setupViews() {
         addSubview(aqiLabel)
-        aqiLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30).isActive = true
+        aqiLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         aqiLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 30).isActive = true
         
-        addSubview(locationLabel)
-        locationLabel.topAnchor.constraint(equalTo: aqiLabel.bottomAnchor, constant: 5).isActive = true
-        locationLabel.centerXAnchor.constraint(equalTo: aqiLabel.centerXAnchor).isActive = true
+        
+        addSubview(statusLabel)
+        statusLabel.topAnchor.constraint(equalTo: aqiLabel.bottomAnchor, constant: 20).isActive = true
+        statusLabel.centerXAnchor.constraint(equalTo: aqiLabel.centerXAnchor).isActive = true
         
         addSubview(separatorLine)
         separatorLine.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        separatorLine.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 30).isActive = true
-        separatorLine.widthAnchor.constraint(equalToConstant: self.bounds.width-16).isActive = true
+        separatorLine.topAnchor.constraint(equalTo: statusLabel.bottomAnchor, constant: 30).isActive = true
+        separatorLine.widthAnchor.constraint(equalToConstant: self.bounds.width-24).isActive = true
         separatorLine.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         
+        
+        addSubview(pollutionView)
+        pollutionView.topAnchor.constraint(equalTo: separatorLine.topAnchor, constant: 45).isActive = true
+        pollutionView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        pollutionView.widthAnchor.constraint(equalToConstant: self.bounds.width - 80).isActive = true
+        pollutionView.heightAnchor.constraint(equalToConstant: 120).isActive = true
     }
     
     

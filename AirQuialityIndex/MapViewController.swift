@@ -104,7 +104,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        centerTheLocation(coordinate: userLocation.coordinate)
+        print("user location updated")
     }
     
     func handleTargetPressed() {

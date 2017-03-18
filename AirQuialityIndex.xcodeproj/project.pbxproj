@@ -22,6 +22,7 @@
 		7F4907BE1E75B32A005FDEFA /* CellForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */; };
 		7F4BABB01E7C557600379171 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4BABAF1E7C557600379171 /* DetailController.swift */; };
 		7FFE4D371E7C6C5600B2C852 /* ViewForDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE4D361E7C6C5600B2C852 /* ViewForDetail.swift */; };
+		7FFE4D391E7D037D00B2C852 /* PollutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE4D381E7D037D00B2C852 /* PollutionView.swift */; };
 		EAF48BBDDAA5A92464A1F5DE /* Pods_AirQuialityIndex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6107A4B221B8153D08BDF7 /* Pods_AirQuialityIndex.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellForCollectionView.swift; sourceTree = "<group>"; };
 		7F4BABAF1E7C557600379171 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		7FFE4D361E7C6C5600B2C852 /* ViewForDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewForDetail.swift; sourceTree = "<group>"; };
+		7FFE4D381E7D037D00B2C852 /* PollutionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollutionView.swift; sourceTree = "<group>"; };
 		B9E4806FC75C707C25256B54 /* Pods-AirQuialityIndex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQuialityIndex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQuialityIndex/Pods-AirQuialityIndex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				7F4907B21E75B32A005FDEFA /* Spot.swift */,
 				7F4907B31E75B32A005FDEFA /* CellForCollectionView.swift */,
 				7FFE4D361E7C6C5600B2C852 /* ViewForDetail.swift */,
+				7FFE4D381E7D037D00B2C852 /* PollutionView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				7F4907BD1E75B32A005FDEFA /* Spot.swift in Sources */,
 				7F4907B81E75B32A005FDEFA /* NavController.swift in Sources */,
 				7F4907B41E75B32A005FDEFA /* ArrayHelper.swift in Sources */,
+				7FFE4D391E7D037D00B2C852 /* PollutionView.swift in Sources */,
 				7F4907B51E75B32A005FDEFA /* CellForSearch.swift in Sources */,
 				7F4907BE1E75B32A005FDEFA /* CellForCollectionView.swift in Sources */,
 				7F4907BA1E75B32A005FDEFA /* DataModel.swift in Sources */,

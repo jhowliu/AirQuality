@@ -205,13 +205,6 @@ class CellForCollectionView: UICollectionViewCell {
         background.addGestureRecognizer(rightSwipe)
         
         deleteButton.addTarget(self, action: #selector(deletePressed), for: .touchUpInside)
-        /*
-        addSubview(pm2dot5)
-        pm2dot5.leftAnchor.constraint(equalTo: rightAnchor, constant: 20)
-        pm2dot5.centerXAnchor.constraint(equalTo: background.centerXAnchor, constant: 0).isActive = true
-        pm2dot5.widthAnchor.constraint(equalToConstant: 120).isActive = true
-        pm2dot5.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        */
     }
     
     enum Direction {

@@ -11,8 +11,8 @@ import UIKit
 class CellForSearch: UITableViewCell {
     var node: Node? {
         didSet {
-            nameLabel.text = (node?.city ?? "") + " " + (node?.district ?? "" )
-            airLevelLabel.text = "空氣品質指數: " + (node?.aqi ?? "")
+            nameLabel.text = "\(node?.city ?? "") - \(node?.district ?? "")"
+            airLevelLabel.text = "空氣品質指數: \(node?.aqi ?? "")"
             let levelColor: UIColor = {
                 let convertedInt: Int = Int(node?.aqi ?? "-1") ?? -1
                 switch (convertedInt) {
@@ -50,7 +50,6 @@ class CellForSearch: UITableViewCell {
         let air = UILabel()
         air.translatesAutoresizingMaskIntoConstraints = false
         air.font = UIFont.systemFont(ofSize: 12, weight: UIFontWeightLight)
-        air.text = "空氣品質指數: "
         
         return air
     }()
