@@ -243,11 +243,15 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }
     
     func fetchData() {
+        showLoadingView()
+        
         Alamofire.request("http://opendata.epa.gov.tw/ws/Data/REWIQA/", method: .get, parameters: ["orderby":"County", "format":"json"]).responseJSON(completionHandler: { response in
             
                 if let JSON = response.result.value {
                     
-                    guard let dictionaries = JSON as? [[String: Any]] else { return }
+                    guard let dictionaries = JSON as? [[String: Any]] else {
+                        return
+                    }
                     
                     GlobalInstances.nodes = []
                     
@@ -261,9 +265,34 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
                         print("Nodes fetch successfully.")
                         self.collectionView?.reloadData()
                         self.navigationItem.leftBarButtonItem?.isEnabled = true
+                        self.removeLoadingView()
                     }
                 }
             })
     }
+   
+    var loadingView: LoadingView?
+    
+    func showLoadingView() {
+        if let window = UIApplication.shared.keyWindow {
+            loadingView = LoadingView(frame: window.frame)
+            window.addSubview(loadingView!)
+        }
+        
+        loadingView?.activityIndicator.startAnimating()
+    }
+    
+    func removeLoadingView() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.loadingView?.alpha = 0
+        })
+        
+        loadingView?.activityIndicator.stopAnimating()
+    }
+    /*
+    func setupAlertView() -> UIAlertController {
+        let alert = UIAlertController
+    }
+ */
 }
 

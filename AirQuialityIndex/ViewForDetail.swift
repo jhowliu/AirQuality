@@ -77,8 +77,6 @@ class ViewForDetail: UIView {
         setupViews()
     }
     
-    
-    
     func setupViews() {
         addSubview(aqiLabel)
         aqiLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true

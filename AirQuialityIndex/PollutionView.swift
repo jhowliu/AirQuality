@@ -85,7 +85,6 @@ class PollutionView: UIView {
         label.layer.borderWidth = 0.5
         label.layer.cornerRadius = 10
         
-        
         return label
     }
 }
