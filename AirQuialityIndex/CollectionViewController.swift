@@ -242,6 +242,16 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         return filtered.count
     }
     
+    let alert: UIAlertController = {
+        let alertcv = UIAlertController(title: "Fetch error", message: "抓取資料錯誤", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "確認", style: UIAlertActionStyle.default, handler: nil)
+        
+        alertcv.addAction(alertAction)
+        
+        return alertcv
+    }()
+   
+    // must move to model layer (networking manager)
     func fetchData() {
         showLoadingView()
         
@@ -264,9 +274,18 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
                     DispatchQueue.main.async {
                         print("Nodes fetch successfully.")
                         self.collectionView?.reloadData()
-                        self.navigationItem.leftBarButtonItem?.isEnabled = true
-                        self.removeLoadingView()
                     }
+                }
+            
+                self.navigationItem.leftBarButtonItem?.isEnabled = true
+                self.removeLoadingView()
+            
+                if response.result.isFailure {
+                    DispatchQueue.main.async {
+                        self.present(self.alert, animated: true, completion: nil)
+                    }
+                    
+                    return 
                 }
             })
     }
